@@ -14,6 +14,8 @@ if [ "$TERM"="linux" ] ;then
 export LANG=en_US.UTF-8
 fi
 
+alias ls=exa
+
 eval "$(~/starship init zsh)"
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
