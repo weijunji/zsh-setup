@@ -8,6 +8,12 @@ curl https://sh.rustup.rs -sSf | sh
 # install cargo related app
 # replacement for ls
 cargo install exa
+# cat
+cargo install bat
+# find
+cargo install fd-find
+# cd
+cargo install zoxide
 
 # install starship
 curl -sS https://starship.rs/install.sh | sudo sh
@@ -25,9 +31,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 # update zshrc
 echo '
 alias ls=exa
+alias cat=bat
 
-eval "$(starship init zsh)"
+eval "$(/usr/local/bin/starship init zsh)"
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+eval "$(zoxide init zsh)"
 ' >> ~/.zshrc
 

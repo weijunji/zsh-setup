@@ -15,9 +15,12 @@ export LANG=en_US.UTF-8
 fi
 
 alias ls=exa
+alias cat=bat
 
-eval "$(~/starship init zsh)"
+eval "$(/usr/local/bin/starship init zsh)"
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+eval "$(zoxide init zsh)"
 
